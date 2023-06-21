@@ -37,11 +37,11 @@ whitelist = ['hackthebox.eu','root-me.org','gmail.com']
 s_url = [i for i in urls if i not in whitelist]
 
 #Loading the model
-file = "MLModel/pickel_model.pkl"
+file = "C:/CodeBase/personal/HackProofPlus/HackProofPlus/MLModel/pickel_model.pkl"
 with open(file, 'rb') as f1:  
     lgr = pickle.load(f1)
 f1.close()
-file = "MLModel/pickel_vector.pkl"
+file = "C:/CodeBase/personal/HackProofPlus/HackProofPlus/MLModel/pickel_vector.pkl"
 with open(file, 'rb') as f2:  
     vectorizer = pickle.load(f2)
 f2.close()
@@ -57,6 +57,6 @@ for site in whitelist:
 predict = list(y_predict)
 for j in range(0,len(whitelist)):
     predict.append('good')
-print("\nThe entered domain is: ", predict[0])
-print("\n\nIf you feel that this prediction is wrong, or if you are not so sure about this output\nyou can contact us at kabirdhruw@protonmail.com we'll check the URL and update the machine\naccodingly. Thank you.")
+print("\nThe entered domain is: ", predict[1])
+print("\n\nIf you feel that this prediction is wrong, or if you are not so sure about this output\nyou can contact us . Thank you.")
 

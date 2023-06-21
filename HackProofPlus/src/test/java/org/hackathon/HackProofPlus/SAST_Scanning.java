@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class SAST_Scanning {
 	@Test
 	public void sastScan() {
-		execute("//scripts//zap.ssl");
+		execute("/scripts/zap.sh");
 	}
 
 }

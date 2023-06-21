@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test  name="Security Scanning">
+  <classes>
+      <class name="org.hackathon.HackProofPlus.SAST_Scanning" />
+      <class name="org.hackathon.HackProofPlus.MalwareDetection" />
+      <class name="org.hackathon.HackProofPlus.IntrusionDetection" />
+      <class name="org.hackathon.HackProofPlus.ThreatInteligence" />
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
