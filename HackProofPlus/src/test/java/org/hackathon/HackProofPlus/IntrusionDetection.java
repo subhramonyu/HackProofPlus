@@ -8,6 +8,6 @@ public class IntrusionDetection {
 	
 	@Test
 	public void detectIntrusion() {
-		execute("//scripts//testssl.sh");
+		execute("/scripts/testssl.sh");
 	}
 }

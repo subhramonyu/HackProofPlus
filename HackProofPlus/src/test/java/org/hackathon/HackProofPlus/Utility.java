@@ -8,9 +8,19 @@ import java.io.InputStreamReader;
 public class Utility {
 
 	public static void execute(String path) {
+		String os = System.getProperty("os.name").toLowerCase();
+		String shellCommand;
+		// Replace "script.sh" with the actual name of your shell script
+		String currentWorkingDir = System.getProperty("user.dir");
+		if (os.contains("win")) {
+			// Windows
+			shellCommand = "cmd /c " + currentWorkingDir + path;
+		} else {
+			shellCommand = "sh -c " + currentWorkingDir + path;
+		}
 		try {
-			// Replace "script.sh" with the actual name of your shell script
-			ProcessBuilder processBuilder = new ProcessBuilder("sh", path);
+
+			ProcessBuilder processBuilder = new ProcessBuilder(shellCommand.split(" "));
 
 			// Set the working directory if necessary
 			// processBuilder.directory(new File("/path/to/working/directory"));
@@ -35,7 +45,5 @@ public class Utility {
 		}
 
 	}
-
-	
 
 }
